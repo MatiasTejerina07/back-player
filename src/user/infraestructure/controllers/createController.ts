@@ -1,4 +1,4 @@
-import { CreateUser } from "../../usecases/Create";
+import { CreateUser } from "../../usecases/Create.js";
 
 export class CreateUserController {
   constructor(private createUser: CreateUser) {}

@@ -1,4 +1,4 @@
-import type { IUser } from "../domain/IUser";
+import type { IUser } from "../domain/IUser.js";
 
 export class CreateUser {
   constructor(private useRepository: IUser) {}
