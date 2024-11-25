@@ -1,7 +1,6 @@
 import { Elysia } from "elysia";
+import { createUserController } from "../server/depenndecies";
 
 export const userRouter = new Elysia({ prefix: "/users" })
-  .post("/", () => {
-    console.log("úser");
-  })
+  .post("/", createUserController.run.bind(createUserController))
   .get("/", () => "all users");
