@@ -11,6 +11,7 @@
     "elysia": "latest"
   },
   "devDependencies": {
+    "bcrypt": "^5.1.1",
     "bun-types": "latest",
     "prisma": "^5.22.0"
   },
