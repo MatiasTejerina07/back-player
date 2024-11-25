@@ -1,5 +1,5 @@
-import type { IUser } from "../domain/IUser";
-import { User } from "../domain/User";
+import type { IUser } from "../domain/IUser.js";
+import { User } from "../domain/User.js";
 import { PrismaClient } from "@prisma/client";
 
 export class UserRepository implements IUser {
@@ -14,7 +14,6 @@ export class UserRepository implements IUser {
         password,
       },
     });
-
     return new User(user.id, user.email, user.password);
   }
 }

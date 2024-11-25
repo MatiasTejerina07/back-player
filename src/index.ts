@@ -1,6 +1,7 @@
-import { Server } from "./server/server";
+import { Server } from "./server/server.js";
 
 (() => {
   const server = new Server();
   server.start();
+  server.mainConnect()
 })();
