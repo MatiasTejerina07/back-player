@@ -9,7 +9,8 @@
     "@elysiajs/swagger": "^1.1.6",
     "@prisma/client": "^5.22.0",
     "bcrypt": "^5.1.1",
-    "elysia": "latest"
+    "elysia": "latest",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
