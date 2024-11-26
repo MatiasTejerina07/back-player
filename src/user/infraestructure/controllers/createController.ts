@@ -1,4 +1,4 @@
-import { CreateUser } from "../../usecases/Create.js";
+import { CreateUser } from "../../usecases/create.js";
 
 export class CreateUserController {
   constructor(private createUser: CreateUser) {}
@@ -7,7 +7,7 @@ export class CreateUserController {
     try {
       const user = await this.createUser.run(body.email, body.password);
       return {
-        status: 201,
+        code: 201,
         data: user,
       };
     } catch (e) {
