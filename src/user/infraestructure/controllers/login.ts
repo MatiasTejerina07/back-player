@@ -3,7 +3,6 @@ import { LoginUser } from "../../usecases/login.js";
 export class LoginController {
   constructor(private loginUser: LoginUser) {}
   async run({ body }: { body: { email: string; password: string } }) {
-    console.log(body);
     try {
       const user = await this.loginUser.run(body.email, body.password);
       return {

@@ -13,7 +13,7 @@ export class LoginUser {
       throw new Error("Credenciales incorrectas");
     }
     const { password: passwordlock, ...userData } = user;
-    
+
     return {
       user: userData,
     };
