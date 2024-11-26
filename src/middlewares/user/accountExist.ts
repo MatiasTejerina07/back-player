@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
-export class accountExist {
+export class accountExist  {
   private db: PrismaClient;
   constructor() {
     this.db = new PrismaClient();
