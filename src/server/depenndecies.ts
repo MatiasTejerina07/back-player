@@ -5,9 +5,9 @@ import { Hash } from "../services/hash.js";
 import { accountExist } from "../middlewares/user/accountExist.js";
 
 /* middlewar */
-const accountUser = new accountExist();
+const account = new accountExist();
 
 const userRepository = new UserRepository();
 const hashServices = new Hash();
-const createUser = new CreateUser(userRepository, hashServices, accountUser);
+const createUser = new CreateUser(userRepository, hashServices, account);
 export const createUserController = new CreateUserController(createUser);
