@@ -1,9 +1,15 @@
 import { LoginUser } from "../../usecases/login.js";
 
+interface Login {
+  body: {
+    email: string;
+    password: string;
+  };
+}
+
 export class LoginController {
   constructor(private loginUser: LoginUser) {}
-  async run({ body }: { body: { email: string; password: string } }) {
-    console.log(body);
+  async run({ body }: Login) {
     try {
       const user = await this.loginUser.run(body.email, body.password);
       return {

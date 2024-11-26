@@ -1,4 +1,4 @@
 export interface IJWT {
-  signin(payload: string): string;
+  signin(payload: string): Promise<string>;
   verify(token: string): string;
 }
