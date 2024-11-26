@@ -8,10 +8,11 @@
   "dependencies": {
     "@elysiajs/swagger": "^1.1.6",
     "@prisma/client": "^5.22.0",
+    "bcrypt": "^5.1.1",
     "elysia": "latest"
   },
   "devDependencies": {
-    "bcrypt": "^5.1.1",
+    "@types/bcrypt": "^5.0.2",
     "bun-types": "latest",
     "prisma": "^5.22.0"
   },
