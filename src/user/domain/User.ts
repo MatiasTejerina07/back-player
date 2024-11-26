@@ -4,6 +4,11 @@ export class User {
     public email: string,
     public password: string,
     public photo?: string,
-    public name?: string
+    public name?: string,
+    public token?: string
   ) {}
+
+  setToken(token: string) {
+    this.token = token;
+  }
 }

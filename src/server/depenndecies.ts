@@ -5,13 +5,15 @@ import { Hash } from "../services/hash.js";
 import { accountExist } from "../middlewares/user/accountExist.js";
 import { LoginController } from "../user/infraestructure/controllers/login.js";
 import { LoginUser } from "../user/usecases/login.js";
+import { JWT } from "../services/jwt.js";
 /* middlewar */
 const account = new accountExist();
 
-const userRepository = new UserRepository();
 const hashServices = new Hash();
+const jwtServices = new JWT();
+const userRepository = new UserRepository();
 const createUser = new CreateUser(userRepository, hashServices, account);
 export const createUserController = new CreateUserController(createUser);
 
-const loginUser = new LoginUser(userRepository, hashServices);
+const loginUser = new LoginUser(userRepository, hashServices, jwtServices);
 export const loginController = new LoginController(loginUser);
